@@ -4,8 +4,8 @@ document.addEventListener('DOMContentLoaded', () => {
 	console.log(`Number of categories: ${categories.length}`);
 
 	categories.forEach((category) => {
-		const title = category.querySelector('h2').textContent;
-		const items = category.querySelectorAll('ul > li');
+		const title = category.firstElementChild.textContent; // використання firstElementChild
+		const items = category.lastElementChild.children; // використання lastElementChild
         
 		console.log(`\nCategory: ${title}\nElements: ${items.length}`);
 	});
